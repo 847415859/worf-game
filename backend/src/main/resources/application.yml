@@ -1,0 +1,29 @@
+server:
+  port: ${BACKEND_PORT:8080}
+
+spring:
+  application:
+    name: wolf-backend
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:127.0.0.1}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:wolf_game}?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    default-property-inclusion: non_null
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+wolf:
+  ai-service:
+    base-url: ${AI_SERVICE_BASE_URL:http://127.0.0.1:3100}
+
+logging:
+  level:
+    com.wolf.backend: debug

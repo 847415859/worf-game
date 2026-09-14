@@ -1,0 +1,23 @@
+{
+  "name": "wolf-video-service",
+  "version": "0.1.0",
+  "description": "AI狼人杀 对局视频生成服务：把已结算对局的event_log渲染成带配音的回放视频（MVP占位素材版）",
+  "private": true,
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node src/server.ts"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.53",
+    "express": "^4.21.0",
+    "node-edge-tts": "^1.2.10"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.7.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}

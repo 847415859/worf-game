@@ -1,0 +1,32 @@
+.env
+.env.*
+!.env.example
+
+# Java / Maven
+backend/target/
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+
+# Node / NestJS / Vue
+node_modules/
+ai-service/dist/
+frontend/dist/
+video-service/dist/
+video-service/output/
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
