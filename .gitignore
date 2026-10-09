@@ -24,6 +24,9 @@ yarn-error.log*
 *.iml
 .vscode/
 
+# Claude Code 本地会话/调度文件
+.claude/
+
 # OS
 .DS_Store
 Thumbs.db
